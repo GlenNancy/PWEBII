@@ -1,0 +1,54 @@
+<h1 class="my-3 text-primary">Cadastrar Produto</h1>
+<div class="card shadow">
+  <form class="m-3">
+    <!-- Inicio row nome -->
+    <div class="row">
+      <div class="col md-12">
+        <div class="form-group">
+          <label for="nome">Nome do Produto:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Digite o nome do Produto"
+            name="nomeProduto"
+            [(ngModel)]="produto.nome"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Fim row nome -->
+    <div class="row">
+      <div class="col md-6">
+        <div class="form-group">
+          <label for="nome">Validade do Produto: </label>
+          <input
+            type="date"
+            class="form-control"
+            name="validade"
+            [(ngModel)]="produto.validade"
+          />
+        </div>
+      </div>
+      <div class="col md-12">
+        <div class="form-group">
+          <label for="nome">Preço do Produto:</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="0.00"
+            name="preco"
+            [(ngModel)]="produto.precoProduto"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-default" routerLink="/produtos">Voltar</button>
+        <button class="btn btn-warning float-right" (click)="salvarProduto()">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

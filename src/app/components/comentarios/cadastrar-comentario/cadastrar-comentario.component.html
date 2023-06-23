@@ -1,0 +1,40 @@
+<h1 class="my-3 text-primary">Cadastrar Comentario</h1>
+<div class="card shadow">
+  <form class="m-3">
+    <!-- Inicio row nome -->
+    <div class="row">
+      <div class="col md-12">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Digite o nome do Produto"
+            name="nomeProduto"
+            [(ngModel)]="comentario.nome"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Fim row nome -->
+    <div class="row">
+      <div class="col md-6">
+        <div class="form-group">
+          <label for="nome">Comentario: </label>
+          <input
+            type="date"
+            class="form-control"
+            name="validade"
+            [(ngModel)]="comentario.descricao"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-default" routerLink="/produtos">Voltar</button>
+        <button class="btn btn-success float-right" (click)="salvarProduto()">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>

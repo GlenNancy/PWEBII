@@ -1,0 +1,28 @@
+<h1 class="text-center mt-2">Seja bem vindo!</h1>
+
+<!-- <h4 class="text-danger">{{ anuncio }}</h4> -->
+
+<div class="row">
+  <div class="col">
+    <app-card-produto
+      [foto]="foto"
+      [nomeProduto]="nomeProduto"
+      [promocao]="promocao"
+      [idProduto]="idProduto"
+      [dataValidade]="dataValidade"
+      [precoProduto]="precoProduto"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col">
+    <app-card-produto
+      foto="http://www.receitadeviagem.com.br/wp-content/uploads/2019/05/Viagem-para-Budapeste-87-Receita-de-Viagem-1024x680.jpg"
+      nomeProduto="Viagem a budapest"
+      [promocao]="false"
+      [idProduto]="15"
+      dataValidade="2021-12-31"
+      [precoProduto]="5434.00"
+    >
+    </app-card-produto>
+  </div>
+</div>

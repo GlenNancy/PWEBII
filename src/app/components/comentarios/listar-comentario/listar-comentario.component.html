@@ -1,0 +1,42 @@
+<h1 class="my-3 text-primary">
+  Listar Comentario
+
+  <button
+    type="buttom"
+    routerLink="/produtos/cadastrar"
+    class="btn btn-success mt-2 float-right"
+  >
+    Cadastrar Comentario
+  </button>
+</h1>
+<div class="card shadow">
+  <table class="table table-responsive table striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Validade</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of listaComentario">
+        <td>{{ coment.id }}</td>
+        <td>{{ prod.nome }}</td>
+        <td>{{ prod.descricao }}</td>
+        <td>{{ prod.data | | date: "shortDate" }}</td>
+        <td>
+          <button class="btn btn-warning"
+          routerLink = "/comentario/atualizar/{{coment.id}}"
+          >
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-danger ml-2">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
