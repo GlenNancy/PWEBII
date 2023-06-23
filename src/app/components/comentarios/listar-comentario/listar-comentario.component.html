@@ -21,17 +21,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let prod of listaComentario">
+      <tr *ngFor="let coment of listaComentario">
         <td>{{ coment.id }}</td>
-        <td>{{ prod.nome }}</td>
-        <td>{{ prod.descricao }}</td>
-        <td>{{ prod.data | | date: "shortDate" }}</td>
+        <td>{{ coment.nome }}</td>
+        <td>{{ coment.descricao }}</td>
         <td>
-          <button class="btn btn-warning"
-          routerLink = "/comentario/atualizar/{{coment.id}}"
-          >
             <i class="fa fa-pencil" aria-hidden="true"></i>
-          </button>
           <button class="btn btn-danger ml-2">
             <i class="fa fa-trash-o" aria-hidden="true"></i>
           </button>
